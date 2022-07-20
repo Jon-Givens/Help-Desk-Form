@@ -52,26 +52,29 @@ export default function SignIn() {
             Help Desk Form
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField 
-              InputProps={{ style: { width: 170 }}}
-              margin="normal"
-              required
-              id="First Name"
-              label="First Name"
-              name="First Name"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField 
-              InputProps={{ style: { width: 170 }}}
-              margin="normal"
-              required
-              id="Last Name"
-              label="Last Name"
-              name="Last Name"
-              autoComplete="email"
-              autoFocus
-            />
+          <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="given-name"
+                  name="firstName"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  autoFocus
+                />
+                </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  name="lastName"
+                  autoComplete="family-name"
+                />
+              </Grid>
+              </Grid>
             <TextField
               margin="normal"
               required
